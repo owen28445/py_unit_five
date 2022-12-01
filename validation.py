@@ -1,13 +1,17 @@
 def get_input():
-    """
-    This function ensures that a user correctly enters in a number in the proper range.
-    :return: a value between 1 and 10, inclusive
-    """
-    pass  # make sure to delete this line after you complete your function
+
+    while True:
+        number = input("please inter number 1, 2, 3 ,4, 5, 6, 7, 8, 9,10,")
+        number = int(number)
+        if number >= 1 and number <= 10:
+                return number
+
+
+
 
 
 def main():
-    print(get_input())
+    print("you entered", get_input())
 
 
 if __name__ == '__main__':
