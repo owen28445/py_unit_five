@@ -1,8 +1,32 @@
 def sequence(number):
-    """
-    If the number n is odd - 3*n + 1
-    If the number n is even n / 2
-    :param number: The starting number for the Hailstone sequence
-    :return: The number of steps taken to reach 1
-    """
-    pass  # delete this line when writing your function
+    counter = 0
+    while True:
+
+        if number % 2 == 0:
+            counter = counter + 1
+            number = number / 2
+            print (number)
+            if number == 1:
+                return counter
+
+
+
+        if number % 2 == 1:
+            counter = counter + 1
+            number = number * 3 + 1
+            print(number)
+            if number == 1:
+                return counter
+
+
+def main():
+    number = int(input("please enter the number "))
+    print("it toke", sequence(number) ,"steps")
+
+
+
+
+
+if __name__ == '__main__':
+    main()
+
